@@ -1,0 +1,41 @@
+#report-container{
+    border-radius: 20px;
+    width: 95%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.report-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+    border-right: 1px solid #ddd;
+}
+
+.report-item-nb{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+}
+
+.report-item-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+}
+
+.report-item-wrapper h4{
+    font-size: larger;
+    margin-bottom: 10px;
+}
+
+.report-item-wrapper h1{
+    color: #68bd45;
+}

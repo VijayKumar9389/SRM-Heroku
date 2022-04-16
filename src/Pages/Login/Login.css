@@ -1,0 +1,86 @@
+.login-page {
+  background-color: #21242e;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#login-image-container {
+  overflow: hidden;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #68bd45;
+}
+
+#login-image-container h1 {
+  color: #fff;
+  margin-bottom: 50px;
+}
+
+#login-image-container p {
+  padding: 10px;
+  font-size: 40px;
+}
+
+#login-container {
+  background-color: #ffffff;
+  width: 350px;
+  height: 500px;
+  border-radius: 20px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#login-message {
+  color: red;
+  margin-bottom: 80px;
+}
+
+
+
+
+
+.inputs {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.inputs label {
+  margin-bottom: 10px;
+  display: flex;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.inputs input {
+  padding: 5px;
+  width: 200px;
+}
+
+#login-btn {
+  margin-top: 50px;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+#login-btn:hover {
+  cursor: pointer;
+  background-color: #68bd45;
+}
+
+#login-heading-wrapper {
+  margin-top: 20px;
+}

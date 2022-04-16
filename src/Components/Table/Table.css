@@ -1,0 +1,222 @@
+.table-container {
+    width: 100%;
+    height: fit-content;
+    padding-bottom: 50px
+}
+
+table {
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.table-heading {
+    width: 95%;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    text-align: left;
+    color: grey;
+}
+
+table thead {
+    height: 50px;
+    padding: 50px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    border-bottom: solid 1px #ddd;
+}
+
+table tr {
+    height: 80px;
+    padding: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+table thead tr {
+    color: grey;
+}
+
+table tbody tr:hover {
+    background-color: #ddd;
+    cursor: pointer;
+    align-items: center;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #F7F7F7;
+}
+
+table tbody tr:nth-child(odd):hover {
+    background-color: #ddd;
+}
+
+table th {
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+table tbody {
+    font-size: 0.9rem;
+}
+
+table td {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 1em 10px;
+}
+
+.btn-cell{
+    color: gray;
+    transition: ease-in .2s;
+    width: 80px;
+}
+
+.tract-cell{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 80px;
+}
+
+.ddl-cell{
+    width: 70px;
+}
+
+.name-cell{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+}
+
+table td textarea {
+    resize: none;
+    overflow: hidden;
+    height: 60px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.comment-input{
+    width: 300px;
+}
+
+.tract-input{
+    width: 100px;
+    text-align: center;
+}
+
+.table-ddl {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+    border-radius: 20px;
+}
+
+.table-ddl option{
+    font-size: 16px;
+}
+
+.tract-cell h2{
+ color: #68bd45;
+}
+
+.btn-cell:hover{
+    color: #fff;
+    background-color: #68bd45;
+}
+
+table .td-name {
+    text-align: left;
+}
+
+.contacted-wrapper {
+    width: 80px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.clearbtn-container {
+    position: relative;
+    right: 50px;
+    bottom: 20px;
+}
+
+.clear-btn-search {
+    position: absolute;
+    margin-top: 5px;
+    z-index: 300;
+}
+
+.clear-btn-clear {
+    position: absolute;
+    z-index: 300;
+}
+
+.ddl-filter select{
+    height: 46px;
+    width: 130px;
+    padding-left: 15px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-right: -5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: relative;
+    z-index: 200;
+    color: gray;
+    cursor: pointer;
+}
+
+.ddl-filter select option{
+    font-size: 20px;
+}
+
+.input-container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 25px;
+    width: 95%;
+}
+
+.input-container input{
+    height: 44px;
+    width: 50%;
+    padding-left: 15px;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    margin-right: -5px;
+    border-radius: 5px;
+    position: relative;
+    z-index: 100;
+}
