@@ -1,8 +1,10 @@
-import './StakeholderForum.css';
-
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { toast } from 'react-toastify';
+
+import './StakeholderForum.css';
+
 
 function StakeholderForum({ Stakeholder }) {
 
@@ -19,7 +21,7 @@ function StakeholderForum({ Stakeholder }) {
     const navigate = useNavigate();
 
     const Update = (name) => {
-        axios.put("https://tritonsrm.com/api/stakeholders/update",
+        axios.put("https://tritonsrm-api.herokuapp.com/api/stakeholders/update",
             {
                 NAME: name,
                 NEWNAME: newName.trim(),
@@ -35,7 +37,7 @@ function StakeholderForum({ Stakeholder }) {
             headers: { "x-access-token": localStorage.getItem("x-access-token") }
         }
         ).then((response) => {
-            // successtoast(name);
+            successtoast(name);
             navigate(`/${newName}`, {
                 replace: true,
                 state: {
@@ -52,6 +54,12 @@ function StakeholderForum({ Stakeholder }) {
                     }
                 }
             });
+        });
+    }
+
+    function successtoast(name) {
+        toast.success(`Successfully updated ${name}`, {
+            position: toast.POSITION.TOP_RIGHT
         });
     }
 

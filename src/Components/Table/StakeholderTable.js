@@ -17,7 +17,7 @@ function StakeholderTable({ Location }) {
     const [contactFilter, setContactFilter] = useState('');
 
     useEffect(() => {
-        axios.get("https://tritonsrm.com/api/stakeholders", {
+        axios.get("https://tritonsrm-api.herokuapp.com/api/stakeholders", {
             headers: {
                 "x-access-token": localStorage.getItem("x-access-token"),
             },
@@ -170,7 +170,7 @@ function StakeholderTable({ Location }) {
                                     <td>{checkMissing(location) ? location[location.length - 2] : 'MISSING'}</td>
                                     <td>{checkMissing(location) ? location[location.length - 3] : 'MISSING'}</td>
                                     <td>{stakeholder.ATTEMPTS}</td>
-                                    <td><div style={getContactStatus(stakeholder.CONTACTED)} className='contacted-wrapper'>{stakeholder.CONTACTED}</div></td>
+                                    <td className='contacted-cell'><div style={getContactStatus(stakeholder.CONTACTED)} className='contacted-wrapper'>{stakeholder.CONTACTED}</div></td>
                                     <td><MdKeyboardArrowRight size='1.5rem' color='grey' /></td>
                                 </tr>
                             );

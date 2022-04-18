@@ -2,6 +2,7 @@ import './Table.css';
 import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import { FaRegSave } from 'react-icons/fa';
 import { BiRightArrowAlt } from 'react-icons/bi';
@@ -20,7 +21,7 @@ function TractRow({ Stakeholder, stakeholderProfile, Search }) {
     const pin = Stakeholder.PIN.split("/");
 
     const Update = (id) => {
-        axios.put("https://tritonsrm.com/api/tracts/update",
+        axios.put("https://tritonsrm-api.herokuapp.com/api/tracts/update",
             {
                 ID: id,
                 STRUCTURE_TYPE: newStructure,
@@ -33,9 +34,15 @@ function TractRow({ Stakeholder, stakeholderProfile, Search }) {
             })
             .then(
                 (response) => {
-                    // successtoast("Successfully Updated Tract " + Stakeholder.TRACT + " for " + Stakeholder.NAME);
+                    successtoast("Successfully Updated Tract " + Stakeholder.TRACT + " for " + Stakeholder.NAME);
                 }
             );
+    }
+
+    function successtoast(name) {
+        toast.success(name, {
+            position: toast.POSITION.TOP_RIGHT
+        });
     }
 
     function selectStakeholder(stakeholderInfo) {

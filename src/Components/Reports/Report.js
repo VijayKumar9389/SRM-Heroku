@@ -11,7 +11,7 @@ function Report() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        Axios.get("https://tritonsrm.com/api/tracts/report", {
+        Axios.get("https://tritonsrm-api.herokuapp.com/api/tracts/report", {
             headers: {
                 "x-access-token": localStorage.getItem("x-access-token"),
             },

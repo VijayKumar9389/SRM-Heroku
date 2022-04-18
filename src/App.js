@@ -1,7 +1,9 @@
 import { Route, Router, Routes } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Axios from 'axios';
+import { ToastContainer } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 import './App.css';
 
 import Profile from './Pages/Profile/Profile';
@@ -14,7 +16,7 @@ function App() {
   Axios.defaults.withCredentials = true;
 
   useEffect(() => {
-    Axios.get('https://tritonsrm.com/api/auth/login').then((response) => {
+    Axios.get('https://tritonsrm-api.herokuapp.com/api/auth/login').then((response) => {
       if (response.data.auth) {
         LogIn(response.data.auth);
       }
@@ -26,7 +28,7 @@ function App() {
   }
 
   function Logout() {
-    Axios.get('https://tritonsrm.com/api/auth/logout');
+    Axios.get('https://tritonsrm-api.herokuapp.com/api/auth/logout');
     setLoggedIn(false);
   }
 
@@ -35,6 +37,7 @@ function App() {
 
   return (
       <div className='app-container'>
+        <ToastContainer />
           <Routes>
               <Route path='/' element={<Home Logout={Logout}/>} />
               <Route path='/:name' element={<Profile Logout={Logout}/>} />

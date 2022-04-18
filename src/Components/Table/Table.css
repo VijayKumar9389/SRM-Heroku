@@ -150,6 +150,15 @@ table .td-name {
     text-align: left;
 }
 
+/* .contacted-cell{
+    background-color: #68bd45;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+} */
+
 .contacted-wrapper {
     width: 80px;
     height: 30px;

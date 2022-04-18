@@ -14,7 +14,7 @@ function Relations({ Stakeholder }) {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get("https://tritonsrm.com/api/stakeholders/connections/" + Stakeholder, {
+        axios.get("https://tritonsrm-api.herokuapp.com/api/stakeholders/connections/" + Stakeholder, {
             headers: {
                 "x-access-token": localStorage.getItem("x-access-token"),
             },
@@ -30,7 +30,7 @@ function Relations({ Stakeholder }) {
             <ul>
                 {data.map((record, index) => {
                     return (
-                        <Link key={index} className='relation-link' to={`/${record.stakeholder.NAME}`} state={{ stakeholder: record.stakeholder }}>
+                        <Link key={index} className='relation-link' onClick={() => window.scrollTo(0, 0)} to={`/${record.stakeholder.NAME}`} state={{ stakeholder: record.stakeholder }}>
                             <li>
                                 <h3>{record.stakeholder.NAME}</h3>
                                 <div className='info-wrapper'>

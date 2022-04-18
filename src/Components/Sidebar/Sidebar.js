@@ -13,7 +13,7 @@ function Sidebar({ setLocation }) {
     const [city, setCity] = useState('');
 
     useEffect(() => {
-        axios.get("https://tritonsrm.com/api/stakeholders/sidebar/locations", {
+        axios.get("https://tritonsrm-api.herokuapp.com/api/stakeholders/sidebar/locations", {
             headers: {
                 "x-access-token": localStorage.getItem("x-access-token"),
             },

@@ -16,12 +16,12 @@ function TractTable({ Stakeholder }) {
     const [btnClearSearch, setbtnClearSearch] = useState(false);
 
     useEffect(() => {
-        axios.get('https://tritonsrm.com/api/tracts/cluster/' + Stakeholder, {
+        axios.get('https://tritonsrm-api.herokuapp.com/api/tracts/cluster/' + Stakeholder, {
             headers: {
                 "x-access-token": localStorage.getItem("x-access-token"),
             },
         }).then((response) => setData(response.data));
-        axios.get("https://tritonsrm.com/api/tracts/", {
+        axios.get("https://tritonsrm-api.herokuapp.com/api/tracts/", {
             headers: {
                 "x-access-token": localStorage.getItem("x-access-token"),
             },
@@ -78,8 +78,8 @@ function TractTable({ Stakeholder }) {
                         <th><h5>Commodity</h5></th>
                         <th><h5>Pipeline Status</h5></th>
                         <th><h5>Comment</h5></th>
-                        <th></th>
-                        <th></th>
+                        <th>Save</th>
+                        <th>View</th>
                     </tr>
                 </thead>
                 <tbody>
