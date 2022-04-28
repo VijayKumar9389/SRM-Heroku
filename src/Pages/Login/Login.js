@@ -42,12 +42,12 @@ const Login = ({ LogIn }) => {
         </div>
         <div className="inputs">
           <h1>{data.NAME}</h1>
-          <label>Username</label>
-          <input onChange={(e) => setUsername(e.target.value)}></input>
+          <label>Username (JohnDoe)</label>
+          <input onChange={(e) => setUsername(e.target.value)} defaultValue='JohnDoe'></input>
         </div>
         <div className="inputs">
-          <label>Password</label>
-          <input type="password" onChange={(e) => setPassword(e.target.value)}></input>
+          <label>Password (Password123)</label>
+          <input type="password" onChange={(e) => setPassword(e.target.value)} defaultValue='Password123'></input>
         </div>
         <button id="login-btn" onClick={login}>Log In</button>
       </div>
