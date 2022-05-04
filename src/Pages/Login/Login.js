@@ -32,7 +32,7 @@ const Login = ({ LogIn }) => {
   return (
     <div className="login-page">
       <div id="login-image-container">
-        <h1>Stakeholder Relation Manager</h1>
+        <h1>Stakeholder Manager</h1>
         <SiCivicrm size='5rem' />
       </div>
       <div id="login-container">
@@ -43,11 +43,11 @@ const Login = ({ LogIn }) => {
         <div className="inputs">
           <h1>{data.NAME}</h1>
           <label>Username (JohnDoe)</label>
-          <input onChange={(e) => setUsername(e.target.value)} defaultValue='JohnDoe'></input>
+          <input onChange={(e) => setUsername(e.target.value)}></input>
         </div>
         <div className="inputs">
           <label>Password (Password123)</label>
-          <input type="password" onChange={(e) => setPassword(e.target.value)} defaultValue='Password123'></input>
+          <input type="password" onChange={(e) => setPassword(e.target.value)} ></input>
         </div>
         <button id="login-btn" onClick={login}>Log In</button>
       </div>
